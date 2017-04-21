@@ -1,4 +1,4 @@
-# Raze vendor example
+# Raze manual example
 
 This is an example of raze being used to vendor dependencies locally. Be advised that directly vendored dependencies are stuck using the target dependencies that the original cargo raze runner's platform needed.
 
@@ -11,6 +11,17 @@ See http://doc.crates.io/specifying-dependencies.html#platform-specific-dependen
 By default raze uses Cargo.toml and Cargo.lock from local dir, and vendors dependencies into "./vendor".
 
 The output directory can be specified as the first command line argument, and overrides can be provided with --override. Overrides will remove a vendored dependency, and replace all references to it with the override build path.
+
+## Pros/Cons compared to [acmcarther/raze-autogen-example](https://github.com/acmcarther/raze-autogen-example)
+
+### Pros
+- About as hermetic as normal Bazel
+- Dependency paths are clear and obvious 
+
+### Cons
+- Manual invocation of raze required
+- Huge diffs when raze is run
+- Generated dependencies will be specific to the platform that raze is run on
 
 ## Folder Structure
 ### ./WORKSPACE
