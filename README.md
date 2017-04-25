@@ -6,11 +6,11 @@ See http://doc.crates.io/specifying-dependencies.html#platform-specific-dependen
 
 ## To update vendored dependencies
 `cargo install raze`
-`cargo raze`
+`./raze.sh`
 
-By default raze uses Cargo.toml and Cargo.lock from local dir, and vendors dependencies into "./vendor".
+By default raze uses Cargo.toml and Cargo.lock from local dir. Raze is configured in "raze.sh" to vendor into ./vendor.
 
-The output directory can be specified as the first command line argument, and overrides can be provided with --override. Overrides will remove a vendored dependency, and replace all references to it with the override build path.
+Overrides can be provided with --override. Overrides will remove a vendored dependency, and replace all references to it with the override build path.
 
 ## Pros/Cons compared to [acmcarther/raze-autogen-example](https://github.com/acmcarther/raze-autogen-example)
 
@@ -21,7 +21,6 @@ The output directory can be specified as the first command line argument, and ov
 ### Cons
 - Manual invocation of raze required
 - Huge diffs when raze is run
-- Generated dependencies will be specific to the platform that raze is run on
 
 ## Folder Structure
 ### ./WORKSPACE
