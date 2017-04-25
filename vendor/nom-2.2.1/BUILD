@@ -16,7 +16,7 @@ load(
 )
 
 rust_library(
-    name = "libc",
+    name = "nom",
     srcs = glob(["lib.rs", "src/**/*.rs"]),
     deps = [
     ],
@@ -24,5 +24,7 @@ rust_library(
         "--cap-lints warn",
     ],
     crate_features = [
+        "default",
+        "stream",
     ],
 )

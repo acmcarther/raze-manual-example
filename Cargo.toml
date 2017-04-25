@@ -13,7 +13,3 @@ nom = "2.2.0"
 [dependencies.libc]
 version = "0.2.21"
 default-features = false
-
-[dependencies.cargo]
-git = "https://github.com/rust-lang/cargo"
-rev = "afe53bdf7043c2ea8ed3cd0fb8c778ff11dccf4a"

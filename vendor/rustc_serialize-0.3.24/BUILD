@@ -16,7 +16,7 @@ load(
 )
 
 rust_library(
-    name = "libc",
+    name = "rustc_serialize",
     srcs = glob(["lib.rs", "src/**/*.rs"]),
     deps = [
     ],
